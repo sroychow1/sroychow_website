@@ -1,103 +1,117 @@
-import Image from "next/image";
+import Bio from './components/Bio';
+import Timeline from './components/Timeline';
+import Research from './components/Research';
+import EducationTimeline from './components/EducationTimeline';
+
+const experiences = [
+  {
+    imageUrl: '/logos/amazon.png',
+    title: 'Software Development Engineer Intern',
+    company: 'Amazon.com, Inc.',
+    date: 'May 2025 - August 2025',
+    description: 'Welcome to the jungle?? idk yet!.'
+  },
+  {
+    imageUrl: '/logos/actri.png',
+    title: 'Research Assistant',
+    company: 'Altman Clinical and Translational Research Institute (ACTRI)',
+    date: 'May 2024 - August 2024',
+    description: ' Learned more about MR, from a clinical perspective. '
+  },
+  {
+    imageUrl: '/logos/videoxrm.jpeg',
+    title: 'MLE/SWE',
+    company: 'VideoXRM LLC',
+    date: 'June 2023 - May 2024',
+    description: 'Did some cool LLM stuff before it was cool.'
+  },
+  {
+    imageUrl: '/logos/bair.png',
+    title: 'Research Assistant',
+    company: 'Berkeley Artificial Intelligence Research (BAIR)',
+    date: 'Jan 2023 - Present',
+    description: 'Got to work with some cool people on real engineering problems/research and was touched by MR as Miki says.'
+  },
+  {
+    imageUrl: '/logos/hypergiant.jpeg',
+    title: 'MLE Intern',
+    company: 'HyperGiant Industries LLC',
+    date: 'May 2021 - August 2021',
+    description: 'Annoyed that AutoDC was not a real project so we made it one.'
+  },
+];
+
+const education = [
+  {
+    imageUrl: '/logos/berkeley.png',
+    degree: 'B.S.E Electrical Engineering and Computer Sciences (EECS)',
+    school: 'University of California, Berkeley',
+    date: 'Expected May 2026',
+    description: 'Relevant Coursework: Data Structures, Algorithms, Artificial Intelligence, Databases, Computer Architecture, Computer Security, Discrete Math & Probability, Linear Algebra, Optimization, Advanced Probability and Stochastic Processes, Communication Networks, Circuits, Signal Processing, Computational Imaging'
+  }
+];
+
+const researchProjects = [
+  {
+    title: "Memz AI (Hackathon Build)",
+    description: "MemZ uses AI to bring memories to life, transforming the way Alzheimer's patients interact with their past.Tools and Frameworks used: NeRF Studio, AWS Lambda, DynamoDB, EC2, React, Typescript, Groq, Hume.",
+    devpostLink: "https://devpost.com/software/memz",
+    date: "2024",
+    coauthors: ["Yash Jain", "Kushal Konad","Rushil Desai"]
+  },
+  {
+    title: "Mechanistic Interpretability of Vision Language Action Model",
+    description: "Applied existing Mechanistic Interpretability techniques to retrieve interpretable visual and language representations of ascending VLA model reasoning informing final VLA model output [robot actuation commands]. Engineered novel interventions- inspired by existing Mechanistic Interpretability techniques - to make VLA models safer.",
+    date: "2024",
+    devpostLink: "https://docs.google.com/presentation/d/1cONIV6yyux6v5dF7RJ8scAe_uyBNEKpQ/edit?usp=sharing&ouid=116574508787426392712&rtpof=true&sd=true",
+    coauthors: ["Amil Dravid", "Bear Haon"]
+  },
+  {
+    title: "Spatial Mapping of Entities Using WIFI",
+    description: "Developed an automated novel neural-network architecture and pipeline, aimed to quantitatively derive insights on router placement. Inspired from DensePose From Wifi(Geng, J. et.al)",
+    devpostLink: "https://drive.google.com/file/d/17fBxYcZ4j4MpO8XV4uM8g3IDNynB0LEW/view?usp=sharing",
+    date: "2023",
+    coauthors: ["Nihal Bonia", "Wills Stern"]
+  },
+  {
+    title: "Xnet: A Novel Generative Deep Learning Architecture for Fast MRI Reconstruction",
+    description: "Developed pipeline for simulating subsampled sparse k-space data, for fast MR reconstruction. Designed and developed a new GAN architecture, to simulate L-1 loss, via TensorFlow, with two groundbreaking innovations: introduction of a new perception loss function, and cross pollination of tensors. (ACM Cutler-Bell Winner)",
+    devpostLink: "https://awards.acm.org/award_winners/roychowdhury_8319791",
+    youtubeLink: "https://www.youtube.com/watch?v=your-video-id",
+    paperLink: "https://arxiv.org/abs/2111.12548",
+    date: "2022"
+  },
+  {
+    title: "AutoDC: Automated data-centric processing",
+    description: "An automated data-centric tool (AutoDC), similar to the purpose of AutoML, aims to speed up the dataset improvement processes. In our preliminary tests on 3 open source image classification datasets, AutoDC is estimated to reduce roughly 80% of the manual time for data improvement tasks, at the same time, improve the model accuracy by 10-15% with the fixed ML code.",
+    githubLink: "https://github.com/gohypergiant/AutoDC",
+    paperLink: "https://arxiv.org/abs/2111.12548",
+    date: "2021",
+    youtubeLink: "https://neurips.cc/virtual/2021/38244",
+    coauthors: ["Zac Yung-Chun Liu", "Scott Tarlow","Akash Nair", "Shweta Badhe", "Tejas Shah"]
+  },
+  {
+    title: "A Modular Framework to Predict Alzheimer's Disease Progression Using Conditional Generative Adversarial Networks",
+    description: "Designed and engineered a series of CDCGANS simulating the rate of progression of Alzheimer's Disease and the atrophy of the brain over time. (Published IEEE IJCNN 2020)",
+    paperLink: "https://doi.org/10.1109/IJCNN48605.2020.9206875",
+    date: "2020",
+    coauthors: ["Shounak Roychowdhury"]
+  }
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main className="min-h-screen bg-white">
+      <Bio />
+      <section className="py-4 bg-white">
+        <Timeline experiences={experiences} />
+      </section>
+      <section className="py-4 bg-white">
+        <Research projects={researchProjects} />
+      </section>
+      <section className="py-4 bg-white">
+        <EducationTimeline education={education} />
+      </section>
+    </main>
   );
 }
