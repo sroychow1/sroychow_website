@@ -78,7 +78,6 @@ const researchProjects = [
     description: "Developed pipeline for simulating subsampled sparse k-space data, for fast MR reconstruction. Designed and developed a new GAN architecture, to simulate L-1 loss, via TensorFlow, with two groundbreaking innovations: introduction of a new perception loss function, and cross pollination of tensors. (ACM Cutler-Bell Winner)",
     devpostLink: "https://awards.acm.org/award_winners/roychowdhury_8319791",
     youtubeLink: "https://www.youtube.com/watch?v=your-video-id",
-    paperLink: "https://arxiv.org/abs/2111.12548",
     date: "2022"
   },
   {
