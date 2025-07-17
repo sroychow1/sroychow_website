@@ -95,7 +95,7 @@ export default function RootLayout({
               sameAs: [
                 "https://linkedin.com/in/shoumikroychowdhury",
                 "https://github.com/sroychow",
-                // Add other social media profiles
+                "https://scholar.google.com/citations?user=YssSsnQAAAAJ&hl=en",
               ],
               knowsAbout: [
                 "Machine Learning",

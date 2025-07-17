@@ -1,6 +1,7 @@
 'use client';
 
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { SiGooglescholar } from 'react-icons/si';
 
 const SocialLinks = () => {
   const socialItems = [
@@ -13,6 +14,11 @@ const SocialLinks = () => {
       name: 'LinkedIn',
       icon: FaLinkedin,
       url: 'https://www.linkedin.com/in/shoumik-roychowdhury-519a471a9/', 
+    },
+    {
+      name: 'Google Scholar',
+      icon: SiGooglescholar,
+      url: 'https://scholar.google.com/citations?user=YssSsnQAAAAJ&hl=en',
     },
   ];
 
