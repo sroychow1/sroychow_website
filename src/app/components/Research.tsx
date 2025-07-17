@@ -17,7 +17,7 @@ interface ResearchProps {
 const Research = ({ projects }: ResearchProps) => {
   return (
     <section className="max-w-4xl mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-8 text-left">Research and Projects</h2>
+      {/* <h2 className="text-4xl font-bold mb-8 text-left">Research and Projects</h2> */}
       <div className="space-y-6">
         {projects.map((project, index) => (
           <Project key={index} {...project} />
