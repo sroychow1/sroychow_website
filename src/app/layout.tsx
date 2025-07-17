@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     images: ["https://sroychow.com/headshot.png"],
   },
   verification: {
-    google: "google-site-verification: google8b39a8d72e330705.html", 
+    google: "xC4Ybzyw4lYaOD5bRoU1nGAmCZCJOmAkm3VzywRf6d4",
   },
   alternates: {
     canonical: "https://sroychow.com",
