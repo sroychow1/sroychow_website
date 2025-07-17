@@ -7,8 +7,8 @@ const Bio = () => {
       <div className="flex flex-col sm:flex-row items-start gap-6">
         <div className="relative w-32 h-32 flex-shrink-0">
           <Image
-            src="/headshot.png" // You'll need to add your avatar image to the public folder
-            alt="Profile picture"
+            src="/headshot.png"
+            alt="Shoumik Roychowdhury - UC Berkeley EECS Student and Software Engineer"
             fill
             className="rounded-full object-cover"
             priority
