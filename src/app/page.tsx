@@ -114,23 +114,17 @@ export default function Home() {
       <Bio />
       
       <section className="py-4 bg-white" aria-label="Professional Experience">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">Professional Experience</h2>
-        </div>
+
         <Timeline experiences={experiences} />
       </section>
       
       <section className="py-4 bg-white" aria-label="Research Projects">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">Research & Projects</h2>
-        </div>
+
         <Research projects={researchProjects} />
       </section>
       
       <section className="py-4 bg-white" aria-label="Education">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">Education</h2>
-        </div>
+
         <EducationTimeline education={education} />
       </section>
     </main>
