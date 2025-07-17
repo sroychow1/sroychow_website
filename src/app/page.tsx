@@ -53,6 +53,13 @@ const education = [
 
 const researchProjects = [
   {
+    title: "Deep learning AI and Restriction Spectrum Imaging for patient-level detection of clinically significant prostate cancer on MRI",
+    description: "To evaluate whether combining maximum RSI-derived restriction scores (RSIrs-max) with deep learning (DL) models can enhance patient-level detection of csPCa compared to using PI-RADS or RSIrs-max alone.",
+    paperLink: "https://www.medrxiv.org/content/10.1101/2024.11.22.24317504v1",
+    date: "2024",
+    coauthors: ["Yuze Song", "Mariluz Rojo Domingo", "Christopher C Conlin", "Deondre D Do", "Madison T Baxter", "Anna Dornisch", "George Xu", "Aditya Bagrodia", "Tristan Barrett", "Mukesh Harisinghani", "Gary Hollenberg", "Sophia Kamran", "Christopher J Kane", "Dimitri A Kessler", "Joshua Kuperman", "Kanglung Lee", "Michael A Liss", "Daniel JA Margolis", "Paul M Murphy", "Nabih Nakrour", "Truong Ngyuen", "Thomas L Osinski", "Rebecca Rakow-penner", "Ahmed S Shabik", "Shaun Trecarten", "Natasha Wehrli", "Eric P Weinberg", "Sean A Woolen", "Anders M Dale", "Tyler M Seibert"]
+  },
+  {
     title: "Memz AI (Hackathon Build)",
     description: "MemZ uses AI to bring memories to life, transforming the way Alzheimer's patients interact with their past.Tools and Frameworks used: NeRF Studio, AWS Lambda, DynamoDB, EC2, React, Typescript, Groq, Hume.",
     devpostLink: "https://devpost.com/software/memz",
