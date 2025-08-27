@@ -9,7 +9,7 @@ const experiences = [
     title: 'Software Development Engineer Intern',
     company: 'Amazon.com, Inc.',
     date: 'May 2025 - August 2025',
-    description: 'Welcome to the jungle?? idk yet!.'
+    description: 'Worked on industry level IaC for LLM training, and elastic attention for semantic search.'
   },
   {
     imageUrl: '/logos/actri.png',
