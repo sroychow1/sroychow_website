@@ -23,7 +23,7 @@ const Bio = () => {
            I forget to push to GitHub, but not before I write a README that says &quot;WIP&quot; for six months 📝🤡. (def not written by GPT )
           </p>
           <a
-            href="https://drive.google.com/file/d/1FbmE2jKY85aW8gTMzHvBBBgeEEs62HiB/view?usp=share_link"
+            href="https://drive.google.com/file/d/1KpkhBRxBg0VNX9mklT-5kNFVxIbPheXo/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 hover:text-blue-800 hover:underline transition-colors"
